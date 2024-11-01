@@ -1,7 +1,7 @@
-package com.colak.springjpatutorial.service;
+package com.colak.springtutorial.service;
 
-import com.colak.springjpatutorial.jpa.Person;
-import com.colak.springjpatutorial.repository.PersonRepository;
+import com.colak.springtutorial.jpa.Person;
+import com.colak.springtutorial.repository.PersonRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -22,5 +22,10 @@ public class PersonService {
     @Transactional(readOnly = true)
     public List<Person> findByBirthDateYear(String year) {
         return repository.findByBirthDateYear(year);
+    }
+
+    @Transactional(readOnly = true)
+    public List<String> findNamesWithSuffix(String suffix) {
+        return repository.findAllWithSuffix(suffix);
     }
 }

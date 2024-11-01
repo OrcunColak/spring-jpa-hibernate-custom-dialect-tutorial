@@ -1,8 +1,8 @@
-package com.colak.springjpatutorial;
+package com.colak.springtutorial;
 
 
-import com.colak.springjpatutorial.jpa.Person;
-import com.colak.springjpatutorial.service.PersonService;
+import com.colak.springtutorial.jpa.Person;
+import com.colak.springtutorial.service.PersonService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -15,7 +15,7 @@ import java.util.List;
 
 @SpringBootApplication
 @Slf4j
-public class SpringJpaTutorialApplication implements CommandLineRunner {
+public class SpringTutorialApplication implements CommandLineRunner {
 
     private PersonService personService;
 
@@ -25,7 +25,7 @@ public class SpringJpaTutorialApplication implements CommandLineRunner {
     }
 
     public static void main(String[] args) {
-        SpringApplication.run(SpringJpaTutorialApplication.class, args);
+        SpringApplication.run(SpringTutorialApplication.class, args);
     }
 
     @Override
