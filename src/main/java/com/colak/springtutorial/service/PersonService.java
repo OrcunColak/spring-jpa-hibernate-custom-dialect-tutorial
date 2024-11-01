@@ -26,6 +26,6 @@ public class PersonService {
 
     @Transactional(readOnly = true)
     public List<String> findNamesWithSuffix(String suffix) {
-        return repository.findAllWithSuffix(suffix);
+        return repository.findNamesWithSuffix(suffix);
     }
 }

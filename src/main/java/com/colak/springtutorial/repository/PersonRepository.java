@@ -3,7 +3,6 @@ package com.colak.springtutorial.repository;
 import com.colak.springtutorial.jpa.Person;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.repository.query.Param;
 
 import java.util.List;
 
@@ -14,5 +13,5 @@ public interface PersonRepository extends JpaRepository<Person, Long> {
 
     // Custom query using concat_strings function
     @Query("SELECT concat_strings(p.name, :suffix) FROM Person p")
-    List<String> findAllWithSuffix(@Param("suffix") String suffix);
+    List<String> findNamesWithSuffix(String suffix);
 }
